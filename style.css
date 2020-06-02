@@ -1,0 +1,73 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    padding: 15px;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    background: #dadce0;
+    padding: 5px;
+    padding-bottom: 30px;
+    overflow-x: auto;
+}
+
+.content > div {
+    transition: .1s;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid transparent;
+}
+
+.content > div:not(:last-child):hover {
+    background: #a8adb8;
+}
+
+.content > div.buttons-container {
+    position: absolute;
+    height: auto;
+    width: 99%;
+    bottom: 10px;
+    left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.content > div.buttons-container > button {
+    cursor: pointer;
+    transition: .1s;;
+    color: #006dd3;
+    background: #fff;
+    padding: 5px 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.content > div.buttons-container > button:first-child {
+    margin-right: 15px;
+}
+
+.content > div.buttons-container > button:hover {
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.3);
+}
+
+.content > div.buttons-container > button:active {
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.5);
+}
