@@ -18,7 +18,12 @@ body {
     padding: 15px;
 }
 
-.content {
+div.container {
+    padding: 0 !important;
+}
+
+div.container, div.container > div.content {
+    position: relative;
     height: 100%;
     width: 100%;
     background: #dadce0;
@@ -27,30 +32,34 @@ body {
     overflow-x: auto;
 }
 
-.content > div {
+div.container > div.content > div {
     transition: .1s;
     padding: 5px;
     margin: 5px;
     border: 1px solid transparent;
 }
 
-.content > div:not(:last-child):hover {
+div.container > div.content > div:not(:last-child):hover {
     background: #a8adb8;
 }
 
-.content > div.buttons-container {
+div.container > div.buttons-container {
     position: absolute;
     height: auto;
-    width: 99%;
+    width: 100%;
     bottom: 10px;
-    left: 3px;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
 
-.content > div.buttons-container > button {
+div.container > div.buttons-container.hide {
+    display: none;
+}
+
+div.container > div.buttons-container > button {
     cursor: pointer;
     transition: .1s;;
     color: #006dd3;
@@ -60,14 +69,14 @@ body {
     border-radius: 5px;
 }
 
-.content > div.buttons-container > button:first-child {
+div.container > div.buttons-container > button:first-child {
     margin-right: 15px;
 }
 
-.content > div.buttons-container > button:hover {
+div.container > div.buttons-container > button:hover {
     box-shadow: 0 0 4px 1px rgba(0,0,0,.3);
 }
 
-.content > div.buttons-container > button:active {
+div.container > div.buttons-container > button:active {
     box-shadow: 0 0 4px 1px rgba(0,0,0,.5);
 }
